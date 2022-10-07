@@ -1,0 +1,1 @@
+[{"model": "animations.genre", "pk": 1, "fields": {"name": "sf"}}, {"model": "animations.genre", "pk": 2, "fields": {"name": "a"}}, {"model": "animations.genre", "pk": 3, "fields": {"name": "b"}}]
