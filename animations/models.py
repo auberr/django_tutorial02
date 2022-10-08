@@ -1,14 +1,13 @@
 from django.db import models
 
 # Create your models here.
-from django.db import models
-
-# Create your models here.
 
 class Genre(models.Model):
     class Meta:
         db_table='genre'
     name = models.CharField(max_length=70, default='')
+    def __str__(self):
+        return f'{self.name}'
 
 
 class Animation(models.Model):
@@ -23,5 +22,6 @@ class Animation(models.Model):
     chapters = models.CharField(max_length=70, default='')
     story = models.TextField(max_length=256, default='')
     img = models.TextField(max_length=256, default='')
-
+    def __str__(self):
+        return f'{self.title}'
 
