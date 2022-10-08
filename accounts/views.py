@@ -47,3 +47,10 @@ def view_follow(request):
         user=request.user
         following = list(user.follow.all().values('username'))
         return JsonResponse({"following":following})
+
+@csrf_exempt
+def view_like(request):
+    if request.method =='GET':
+        user = request.user
+        likes = list(user.like_articles.all().values())
+        return JsonResponse({"likes":likes})
